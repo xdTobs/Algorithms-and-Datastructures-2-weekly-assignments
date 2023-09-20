@@ -87,7 +87,51 @@ badbba
 
 [1,5] = 1
 
-<img src="image-3.png" alt="drawing" width="400"/>
+
 
 # 4
+
+# 5
+
+## a
+
+Set $x_4$ = 2, then the algorithm will choose to use the emp on the 4th element, and will have to skip the 3rd element which is optimal.
+
+The algorithm will return 4, but the optimal solution is 5. with choosing the 3rd and 4th elements.
+
+## b
+
+for each element in array, either choose the element or skip it, then make 2d cache based on index and time since shooting.
+
+then pick the max robots destroyed from shooting or skipping the element.
+
+```
+OPT(index, rechargeindex){
+
+    int shot_robots = min(robots[index],recharge(rechargeindex)
+
+    if(index == robots.length-1)
+        return shot_robots
+    
+
+    return max(OPT(index-1,rechargeindex+1), OPT(index-1,1)+shot_robots))
+}
+```
+cache
+```
+OPT(index, rechargeindex){
+    
+    int shot_robots = min(robots[index],recharge(rechargeindex)
+
+    if(index == robots.length-1){
+        cache[index][rechargeindex] = shot_robots
+        return cache[index][rechargeindex]
+    }
+    
+    cache[index][rechargeindex] = max(OPT(index-1,rechargeindex+1), OPT(index-1,1)+shot_robots))
+
+    return cache[index][rechargeindex]
+}
+```
+
 
