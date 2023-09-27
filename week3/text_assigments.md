@@ -134,4 +134,24 @@ OPT(index, rechargeindex){
 }
 ```
 
+# 6
 
+## 6.1
+
+You look for any result having G[n/2,n,x,y] where both x and y are greater than a quarter of the total votes.
+
+## 6.2
+
+$OPT(j,k+1,d_1,d_2)=$
+
+$OPT(j-1,k,d_1-v,d_2)$
+
+$OPT(j,k,d_1,d_2-v)$
+
+
+
+ 
+
+## 6.3
+
+## 6.4
