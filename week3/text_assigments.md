@@ -1,6 +1,6 @@
 # 1
 
-<img src="image.png" alt="drawing" width="400"/>
+
 
 # 2
 
@@ -29,7 +29,7 @@ The base case is when the length of the string is 1, then the longest palindrome
 LP(s) = 
 {
 LP(s[1:-1]) + 2 if s[0] == s[l-1]
-LP(s[1:])
+max(LP(s[1:]),LP(s(:1)))
 1               if s.length() == 1
 }
 ```
